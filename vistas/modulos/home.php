@@ -23,7 +23,7 @@
               <div class="card-body">
                 <h6 class="card-title">'.$value["titulo"].'</h6>
                 <p class="card-text"></p>
-                <a href="receta/'.$value["id_receta"].'" class="btn btn-primary">Ver Receta</a>
+                <a href="'.$url.'receta/'.$value["id_receta"].'" class="btn btn-primary">Ver Receta</a>
               </div>
             </div>
           </div>';
