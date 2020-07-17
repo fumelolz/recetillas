@@ -11,16 +11,18 @@
     </ul>
     <?php 
 
+    $url = ControladorPlantilla::url();
+
     if (isset($_SESSION["logged"]) && $_SESSION["logged"]) {
 
       echo '  
 
       <span class="navbar-text">
-      <a href="http://localhost/recetillas/crear-receta">Crear Receta</a>
+      <a href="'.$url.'crear-receta">Crear Receta</a>
       |
       <a href="#">'.$_SESSION["nombre"].'</a>
       |
-      <a href="http://localhost/recetillas/logout">Cerrar Sesión</a>
+      <a href="'.$url.'logout">Cerrar Sesión</a>
       </span>
 
 
@@ -30,9 +32,9 @@
       echo '  
 
       <span class="navbar-text">
-      <a href="http://localhost/recetillas/login">Iniciar Sesión</a>
+      <a href="'.$url.'login">Iniciar Sesión</a>
       |
-      <a href="http://localhost/recetillas/registro">Registrate</a>
+      <a href="'.$url.'registro">Registrate</a>
       </span>
 
 
