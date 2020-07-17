@@ -11,13 +11,15 @@
       $valor = null;
 
       $respuesta = ControladorRecetas::ctrMostrarRecetas($columna,$valor);
+
+      $url = ControladorPlantilla::url();
       
       foreach ($respuesta as $key => $value) {
         
         echo '  
-          <div class="col-md-3">
+          <div class="col-md-3 mt-3">
             <div class="card" style="width: 18rem;">
-              <img src="http://localhost/recetillas/'.$value["ruta_imagen"].'" class="card-img-top" style="height: 120px;">
+              <img src="'.$url.$value["ruta_imagen"].'" class="card-img-top" style="height: 120px;">
               <div class="card-body">
                 <h6 class="card-title">'.$value["titulo"].'</h6>
                 <p class="card-text"></p>

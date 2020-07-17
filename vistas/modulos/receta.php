@@ -6,11 +6,12 @@ $valor = $ruta[1];
 $respuesta = ControladorRecetas::ctrMostrarRecetas($columna,$valor);
 $autor = ControladorUsuarios::ctrMostrarUsuarios("id_usuario",$respuesta["id_usuario"]);
 $categoria = ControladorRecetas::ctrMostrarCategorias($respuesta["id_categoria"]);
+$url = ControladorPlantilla::url();
 if ($respuesta) {
 	
 	echo '  
 		<div class="container mt-2 blog">
-			<img src="http://localhost/recetillas/'.$respuesta["ruta_imagen"].'" alt="">
+			<img src="'.$url.$respuesta["ruta_imagen"].'" alt="">
 			<br>
 			<h2>'.$respuesta["titulo"].'</h2>
 			<h5>Autor '.$autor["nombre"].'</h5>
